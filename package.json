@@ -1,0 +1,40 @@
+{
+  "name": "arobase-chat-evm-contracts",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arobasechat/arobase-chat-evm-contracts.git"
+  },
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test --evm-version prague",
+    "gen-abi": "tsx tooling/gen-abi.ts",
+    "typecheck": "tsc --noEmit",
+    "chains": "tsx tooling/chains.ts",
+    "dev": "tsx tooling/dev.ts",
+    "deploy:local": "tsx tooling/deploy-local.ts",
+    "seed": "tsx tooling/seed.ts",
+    "deploy:chains": "tsx tooling/deploy.ts",
+    "check": "tsx tooling/check.ts",
+    "propose": "tsx tooling/propose.ts",
+    "upgrade-contract": "tsx tooling/upgrade.ts",
+    "grant-role": "tsx tooling/grant-role.ts",
+    "fund-paymaster": "tsx tooling/fund-paymaster.ts",
+    "sweep": "tsx tooling/sweep.ts",
+    "recover-legacy": "tsx tooling/recover-legacy.ts"
+  },
+  "dependencies": {
+    "@noble/ciphers": "^2.4.0",
+    "@noble/curves": "^2.4.0",
+    "@noble/hashes": "^2.4.0",
+    "viem": "^2.57.11"
+  },
+  "devDependencies": {
+    "@pimlico/alto": "^0.0.21",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

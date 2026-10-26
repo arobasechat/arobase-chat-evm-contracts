@@ -1,0 +1,21 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.28"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 10000
+via_ir = true
+remappings = [
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "forge-std/=lib/forge-std/src/",
+  "account-abstraction/=lib/account-abstraction/contracts/",
+]
+fs_permissions = [{ access = "read-write", path = "./deployments" }]
+
+[profile.ci]
+fuzz = { runs = 2000 }
+
+[fmt]
+line_length = 110

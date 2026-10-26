@@ -1,0 +1,149 @@
+{
+  "name": "arobase.chat",
+  "social": {
+    "chainId": 100,
+    "name": "Gnosis",
+    "legacy": false,
+    "priorityGwei": "1",
+    "rpcs": [
+      "https://rpc.gnosischain.com",
+      "https://gnosis-rpc.publicnode.com"
+    ],
+    "maxFeeGwei": "2",
+    "ownRpcs": [
+      "https://gnosis-rpc.arobase.chat"
+    ]
+  },
+  "content": [
+    {
+      "chainId": 5042,
+      "name": "Arc",
+      "role": 1,
+      "legacy": false,
+      "rpcs": [
+        "https://rpc.mainnet.arc.io",
+        "https://arc-rpc.publicnode.com"
+      ],
+      "ownRpcs": [
+        "https://arc-rpc.arobase.chat"
+      ]
+    },
+    {
+      "chainId": 42161,
+      "name": "Arbitrum One",
+      "role": 2,
+      "legacy": false,
+      "rpcs": [
+        "https://arb1.arbitrum.io/rpc",
+        "https://arbitrum-one-rpc.publicnode.com"
+      ],
+      "ownRpcs": [
+        "https://arbitrum-rpc.arobase.chat"
+      ]
+    },
+    {
+      "chainId": 8453,
+      "name": "Base",
+      "role": 2,
+      "legacy": false,
+      "rpcs": [
+        "https://mainnet.base.org",
+        "https://base-rpc.publicnode.com"
+      ],
+      "ownRpcs": [
+        "https://base-rpc.arobase.chat"
+      ]
+    },
+    {
+      "chainId": 137,
+      "name": "Polygon",
+      "role": 2,
+      "legacy": false,
+      "rpcs": [
+        "https://polygon-bor-rpc.publicnode.com",
+        "https://polygon.drpc.org"
+      ],
+      "priorityGwei": "40",
+      "maxFeeGwei": "800"
+    }
+  ],
+  "timelock": {
+    "delaySeconds": 0,
+    "proposer": null
+  },
+  "initialAdmins": [],
+  "stake": {
+    "minStake": "1",
+    "stakeUnit": "1",
+    "cooldownSeconds": 604800
+  },
+  "rpcsPerChain": 5,
+  "params": {
+    "minClientVersion": 1,
+    "hideThreshold": 10,
+    "globalWindowSec": 86400,
+    "globalMinWeight": 0,
+    "noteMinRatings": 3,
+    "socialBatchMs": 1200,
+    "ipfsGateways": [
+      "https://ipfs.io/ipfs/",
+      "https://dweb.link/ipfs/",
+      "https://w3s.link/ipfs/"
+    ]
+  },
+  "sponsor": {
+    "difficulty": 16,
+    "unstakeDelaySeconds": 86400,
+    "chains": {
+      "100": {
+        "stake": "1",
+        "deposit": "5",
+        "maxCostPerOp": "0.05",
+        "dailyBudget": "0.5",
+        "perSenderDaily": 300,
+        "bundlers": [
+          "https://bundler-gnosis.arobase.chat",
+          "https://public.pimlico.io/v2/100/rpc",
+          "https://api.candide.dev/public/v3/100"
+        ],
+        "limits": {
+          "priorityFeeGwei": "3"
+        }
+      },
+      "5042": {
+        "stake": "1",
+        "deposit": "10",
+        "maxCostPerOp": "0.05",
+        "dailyBudget": "0.5",
+        "perSenderDaily": 300,
+        "bundlers": [
+          "https://bundler-arc.arobase.chat",
+          "https://public.pimlico.io/v2/5042/rpc"
+        ],
+        "limits": {
+          "priorityFeeGwei": "3"
+        }
+      },
+      "8453": {
+        "stake": "0.005",
+        "deposit": "0.01",
+        "maxCostPerOp": "0.0005",
+        "dailyBudget": "0.003",
+        "perSenderDaily": 50,
+        "bundlers": [
+          "https://bundler-base.arobase.chat",
+          "https://public.pimlico.io/v2/8453/rpc"
+        ],
+        "limits": {
+          "priorityFeeGwei": "0.05",
+          "preVerificationGas": 400000,
+          "preVerificationGasPerByte": 200
+        }
+      }
+    }
+  },
+  "avoidRpcs": [
+    "blockreq.com"
+  ],
+  "repoUrl": "https://github.com/arobasechat"
+}
